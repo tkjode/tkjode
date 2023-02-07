@@ -23,6 +23,12 @@
   | 10 | COBOL |
 </details>
 
+---
+
+> A wise man once said to do stuff
+
+<!-- Comment --> 
+
 ## Details
 
 | k | v |
