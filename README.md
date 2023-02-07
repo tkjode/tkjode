@@ -1,5 +1,11 @@
 # TKJode
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://inara.cz/data/gallery/227/227902x6047.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="https://inara.cz/data/gallery/199/199421x1292.jpg">
+  <img alt="tkjode" src="https://inara.cz/data/users/60/60757x6861.jpg">
+</picture>
+
 ## Details
 
 | k | v |
