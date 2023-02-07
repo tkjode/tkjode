@@ -6,6 +6,23 @@
   <img alt="tkjode" src="https://inara.cz/data/users/60/60757x6861.jpg">
 </picture>
 
+<details>
+  <summary>Languages Ranked By Enjoyment While Coding</summary>
+
+  | Rank | Language |
+  | ---: | ---- | 
+  | 1 | Bash |
+  | 2 | Javascript |
+  | 3 | Python |
+  | 4 | jq |
+  | 5 | Go |
+  | 6 | C++ |
+  | 7 | PHP |
+  | 8 | BASIC |
+  | 9 | Perl |
+  | 10 | COBOL |
+</details>
+
 ## Details
 
 | k | v |
