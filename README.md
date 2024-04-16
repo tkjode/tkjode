@@ -1,56 +1,35 @@
-# TKJode
+# Hello
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://inara.cz/data/gallery/227/227902x6047.jpg">
-  <source media="(prefers-color-scheme: light)" srcset="https://inara.cz/data/gallery/199/199421x1292.jpg">
-  <img alt="tkjode" src="https://inara.cz/data/users/60/60757x6861.jpg">
-</picture>
-
-<details>
-  <summary>Languages Ranked By Enjoyment While Coding</summary>
-
-  | Rank | Language |
-  | ---: | ---- | 
-  | 1 | Bash |
-  | 2 | Javascript |
-  | 3 | Python |
-  | 4 | jq |
-  | 5 | Go |
-  | 6 | C++ |
-  | 7 | PHP |
-  | 8 | BASIC |
-  | 9 | Perl |
-  | 10 | COBOL |
-</details>
-
----
-
-> A wise man once said to do stuff
-
-<!-- Comment --> 
-
-## Details
-
-| k | v |
-| :--: | :--: |
-| name | Jody Reid |
-| email | tkjode@gmail.com |
-| Website | None Active |
-
-## What's up?
-
-Welcome user. I operate a small handful of personal/private repositories mainly 
-centered around fun little code projects, my aging homelab/home server setup, 
+Welcome user. I operate a small handful of personal/private repositories mainly
+centered around fun little code projects, my aging homelab/home server setup,
 and maybe, one day, some pipelines and public cloud builds to get a website going.
 
-I do not contribute to public projects with this name - most of the employers I've 
-had the pleasure of working with actually forbid unapproved open-source 
-contribution as they want first right of refusal for anything I come up with... 
-Not that it's particularly gamechanging, just that's how they roll. 
+I do not contribute to public projects with this name - most of the employers I've
+had the pleasure of working with actually forbid unapproved open-source
+contribution as they want first right of refusal for anything I come up with...
+Not that it's particularly gamechanging, just that's how they roll.
 
-## My stances
+## My Projects
 
-- Security is important, except in the context of my lazy code running in my lab.
-- Hating on languages for their syntax is irrational.  Hate on poor performance.
-- Hating on tabs/spaces is irrational, but cursor navigation has to be comfy.
-- I don't do UX/UI.  If I do, it's a console window.
+### HomeStacks (Private)
+
+- A set of configurators created for each stage of my home lab equipment lifecycle
+  - __Scripts:__ Pull down repositories, configure Docker/PodMan, start local clusters, install GitOps tools eg. ArgoCD
+  - __Docker:__ Stacks folders containing collections of docker-compose's that can be used to stand up homelab features like Newsgroup downloaders and Plex Media Servers ;)
+  - __Kubernetes:__ Lots of straight-up YAML deployables, Kustomizations and Helm Charts for testing things in Kubernetes using Rancher k3d, KIND and/or Minikube.
+  - __OpenShift:__ An offshoot of the Kuberntes work, but focussing on ArgoCD/GitOps Operator patterns, initializing entire clusters single-yaml ignition-style, and figuring out how some super-sus operators actually work.
+
+HomeStacks commands a small variety of HomeLab equiment:
+
+- __RASPI:__ Mainly runs as an emergency network access head in my rack, and runs neovim on console pretty good for config hacks when doing major rack maintenance.
+- __FLEXO:__ My trusty Gigabyte Brix 4th generation i7 mini PC.  It still runs 24x7 after all these years.
+  - Storage and Media Streaming
+- __PROXMOX:__ A Dell PowerEdge T630 running Proxmox for virtualization work.
+  - Hosts OpenShift and KIND clusters.
+  - Hosts the all-important MINECRAFT SERVER!
+
+### EDDN Projects
+
+- Reference: [https://eddn.edcd.io/](https://eddn.edcd.io/)
+- I want to store all known Elite Dangerous galaxy discovery data and have a realtime constant stream of updates pushing into the solution.
+- Looking at making a flexible message routing system with RabbitMQ that will allow multiple apps to pull meaningful messages out and perform various tasks on them.
