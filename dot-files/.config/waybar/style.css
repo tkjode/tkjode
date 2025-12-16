@@ -1,0 +1,172 @@
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: SauceCodePro Nerd Font;
+    font-size: 10pt;
+    font-style: normal;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(28, 28, 28, 0.5);
+    color: #77aaff;
+}
+
+#workspaces,
+#pulseaudio.out,
+#pulseaudio.in,
+#clock,
+#cpu,
+#tray,
+#battery,
+#network,
+#custom-notification,
+#custom-user-menu,
+#custom-power,
+#custom-reboot {
+    background: rgba(28, 28, 28, 0.83);
+    border-radius: 5px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#workspaces {
+    margin: 5px 5px 5px 10px;
+    padding: 0;
+    border: solid 2px #7799aa;
+    box-shadow: 0px 0px 5px #88aadd;
+}
+
+#workspaces button {
+    color: #77aaff;
+    margin: 0;
+    padding: 0.2em 15px 0.2em 13px;
+}
+
+#workspaces button.visible {
+    color: #77aaff;
+}
+
+#workspaces button.empty:not(.visible) {
+    color: #5588aa;
+}
+
+#workspaces button:hover,
+#workspaces button.empty:hover
+{
+    background-color: #77aaff;
+    color: #282828;
+}
+
+#pulseaudio.out {
+    border-radius: 6px 0px 0px 6px;
+    margin: 5px 0px 5px 2px;
+    padding: 0px 10px 0px 15px;
+}
+
+#pulseaudio.in {
+    border-radius: 0 6px 6px 0;
+    margin: 5px 2px 5px 0px;
+    padding: 0px 15px 0px 10px;
+}
+
+#pulseaudio.out.zero:not(.muted) {
+    color: #405c54;
+}
+
+#pulseaudio.out.low:not(.muted) {
+    color: #506c64;
+}
+
+#pulseaudio.out.medium:not(.muted) {
+    color: #607c74;
+}
+
+#pulseaudio.out.sweet:not(.muted) {
+    color: #77aaff;
+}
+
+#pulseaudio.out.loud:not(.muted) {
+    color: #99ccff;
+}
+
+#pulseaudio.out.max:not(.muted) {
+    color: #ff7777;
+}
+
+#pulseaudio.in {
+    color: #77aaff;
+}
+
+#pulseaudio.out.muted,
+#pulseaudio.in.source-muted {
+    color: #337799;
+}
+
+#battery,
+#clock,
+#cpu,
+#tray,
+#network,
+#custom-notification,
+#custom-user-menu,
+#custom-power,
+#custom-reboot {
+    font-weight: bold;
+    padding: 0 15px 0 13px;
+    margin: 5px 2px;
+    border: none;
+}
+
+#tray {
+    background-color: rgba(28, 28, 28, 0.5);
+    padding: 0px 10px;
+}
+
+#user {
+    margin-right: 5px;
+}
+
+#custom-user-menu {
+    color: #689d6a;
+}
+
+#custom-user-menu:hover {
+    background-color: #689d6a;
+    color: #d5c4a1;
+}
+
+#custom-power {
+    background-color: #cc241d;
+}
+
+#custom-power:hover {
+    background-color: #fb4934;
+}
+
+#custom-reboot {
+    background-color: #076678;
+}
+
+#custom-reboot:hover {
+    background-color: #458588;
+}
+
+#custom-notification.cc-open {
+    background-color: #282828;
+}
+
+#custom-notification.none {
+    color: #7c6f64;
+}
+
+#custom-notification.notification {
+    background-color: #fabd2f;
+    color: #282828;
+}
+
+#custom-notification.dnd-notification,
+#custom-notification.dnd-none
+{
+    color: #cc241d;
+}

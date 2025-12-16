@@ -1,0 +1,150 @@
+{
+  "battery": {
+    "interval": 60,
+    "states": { "warning": 30, "critical": 15 },
+    "format": "<span color='#77aaff'>{icon}</span> {capacity}%",
+    "format-icons": [ "", "", "", "", "" ]
+  },
+  "clock": {
+    "calendar": {
+      "format": {
+        "days": "<span color='#bdae93'><b>{}</b></span>",
+        "today": "<span color='#fe8019'><b>{}</b></span>",
+        "weekdays": "<span color='#8ec07c'><b>{}</b></span>"
+      },
+      "mode": "month"
+    },
+    "format": "<span color='#77aaff'></span> {:%I:%M %p}",
+    "format-alt": "<span color='#77aaff'></span> {:%d %m %Y}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+  "cpu": {
+    "format": "<span color='#77aaff'></span> {usage}%",
+    "format-alt": "<span color='#77aaff'></span> {avg_frequency}GHz",
+    "interval": 5
+  },
+  "custom/notification": {
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "return-type": "json",
+    "escape": true,
+    "format": "<big>{icon}</big>",
+    "format-icons": {
+      "none": "",
+      "notification": "",
+      "dnd-none": "",
+      "dnd-notification": ""
+    },
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw"
+  },
+  "custom/power": {
+    "format": "<big></big>",
+    "on-click": "~/.config/hypr/scripts/shutdown.sh",
+    "tooltip-format": "Shutdown"
+  },
+  "custom/reboot": {
+    "format": "<big></big>",
+    "on-click": "~/.config/hypr/scripts/reboot.sh",
+    "tooltip-format": "Reboot"
+  },
+  "custom/user-menu": {
+    "format": "<big></big>",
+    "on-click": "",
+    "tooltip": false
+  },
+  "group/user": {
+    "drawer": {
+      "children-class": "group-power",
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/user-menu",
+      "custom/reboot",
+      "custom/power"
+    ],
+    "orientation": "inherit"
+  },
+  "height": 16,
+  "sway/workspaces": {
+    "active-only": true,
+    "all-outputs": false,
+    "format": "<big>{icon}</big>",
+    "format-icons": {
+      "1": "[1]",
+      "2": "[2]",
+      "3": "[3]",
+      "4": "[4]",
+      "5": "[5]",
+      "6": "[6]",
+      "7": "[7]",
+      "8": "[8]"
+    },
+    "on-click": "activate",
+    "on-scroll-down": "hyprctl dispatch workspace m-1",
+    "on-scroll-up": "hyprctl dispatch workspace m+1"
+  },
+  "layer": "top",
+  "modules-center": [],
+  "modules-left": [
+    "sway/workspaces"
+  ],
+  "modules-right": [
+    "cpu",
+    "network",
+    "pulseaudio#out",
+    "pulseaudio#in",
+    "custom/notification",
+    "tray",
+    "battery",
+    "clock",
+    "group/user"
+  ],
+  "network": {
+    "format-disconnected": "<span color='#fb4934'>{icon}</span>",
+    "format-ethernet": "<span color='#689d6a'>{icon}</span>",
+    "format-icons": [
+      ""
+    ],
+    "format-linked": "<span color='#fe8019'>{icon}</span>",
+    "tooltip": false
+  },
+  "position": "top",
+  "pulseaudio#in": {
+    "format": "{format_source}",
+    "format-muted": "{format_source}",
+    "format-source": "<big></big>",
+    "format-source-muted": "<big></big>",
+    "on-click": "pavucontrol",
+    "on-scroll-down": "",
+    "on-scroll-up": "",
+    "tooltip-format": "Open VU Control"
+  },
+  "pulseaudio#out": {
+    "format": "<big>{icon}</big>",
+    "format-icons": {
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ],
+      "headphone": ""
+    },
+    "format-muted": "<big>󰝟</big>",
+    "on-click": "pavucontrol",
+    "states": {
+      "loud": 80,
+      "low": 15,
+      "max": 100,
+      "medium": 30,
+      "sweet": 60,
+      "zero": 0
+    },
+    "tooltip-format": "{volume}"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 5
+  }
+}
